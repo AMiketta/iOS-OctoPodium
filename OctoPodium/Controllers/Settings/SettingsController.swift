@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoreKit
 
 class SettingsController : UITableViewController {
     
@@ -50,7 +51,7 @@ class SettingsController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        if (indexPath as NSIndexPath).section == 1 && (indexPath as NSIndexPath).row == 4 {
+        if (indexPath.section, indexPath.row) == (1, 4) {
             tableView.deselectRow(at: indexPath, animated: false)
             return nil
         }
@@ -71,34 +72,45 @@ class SettingsController : UITableViewController {
     ]
     
     func performSelectorBasedOn(_ indexPath: IndexPath) {
-        let key = "section\((indexPath as NSIndexPath).section)row\((indexPath as NSIndexPath).row)"
+        let key = "section\(indexPath.section)row\(indexPath.row)"
         if let selector = indexPathSelectors[key] {
             perform(Selector(selector))
         }
     }
     
-    func developerTwitter() {
+    @objc func developerTwitter() {
         let _ = Twitter.Follow(username: K.twitterHandle)
     }
     
-    func developerGithub() {
+    @objc func developerGithub() {
         Browser.openPage(K.appOwnerGithub)
         Analytics.SendToGoogle.showDeveloperOnGithubEvent()
     }
     
-    func reviewOctoPodium() {
+    @objc func reviewOctoPodium() {
         Analytics.SendToGoogle.reviewInAppStoreEvent()
-        Browser.openPage("itms-apps://itunes.apple.com/app/id\(K.appId)")
+        if #available(iOS 10.3, *) {
+            SKStoreReviewController.requestReview()
+        } else {
+
+            Browser.openPage("itms-apps://itunes.apple.com/app/id\(K.appId)")
+        }
     }
     
-    func showOctoPodiumReadMe() {
+    @objc func showOctoPodiumReadMe() {
         Analytics.SendToGoogle.viewOctoPodiumReadMeEvent()
     }
     
-    func starOctoPodium() {
+    @objc func starOctoPodium() {
         Analytics.SendToGoogle.starOctopodiumEvent()
-        GitHub.StarRepository(repoOwner: K.appOwnerName, repoName: K.appRepositoryName)
-              .doStar(starSuccessfull, failure: starFailed)
+        if GithubToken.instance.exists() {
+
+            GitHub.StarRepository(repoOwner: K.appOwnerName, repoName: K.appRepositoryName)
+                .doStar(starSuccessfull, failure: starFailed)
+        } else {
+
+            NotifyWarning.display("You need to login to be able to star repositories.")
+        }
     }
     
     private func starSuccessfull() {
