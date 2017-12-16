@@ -8,12 +8,42 @@
 
 class Notification : NSObject {
     
-    let errorDuration: TimeInterval = 0.75
-    let window = UIApplication.shared.keyWindow!
+    private let errorDuration: TimeInterval = 0.75
+    private let window = UIApplication.shared.keyWindow!
+    private static let navigationBarHeight: CGFloat = 66
+    private static let statusBarHeight: CGFloat = 20
  
     static let instance = Notification()
+
+    private let height: CGFloat
     
-    private override init() {}
+    private override init() {
+
+        self.height = Notification.calculatedHeight
+    }
+
+    private static var calculatedHeight: CGFloat {
+
+        var height: CGFloat = navigationBarHeight
+
+        //Damn... this code looks... awesome... not!
+        if #available(iOS 11.0, *) { // joining the conditions doesn't seem to work
+            if let topSafeAreaInset = UIApplication.shared.keyWindow?.safeAreaInsets.top,
+                topSafeAreaInset > 0 {
+
+                height = (navigationBarHeight + topSafeAreaInset)
+
+            } else {
+
+                height += statusBarHeight
+            }
+        } else {
+
+            height += statusBarHeight
+        }
+
+        return height
+    }
     
     var isDisplaying = false
     
@@ -23,7 +53,7 @@ class Notification : NSObject {
         }
         isDisplaying = true
         
-        let alertView = AlertView(frame: CGRect(x: 0, y: -80, width: window.width, height: 84))
+        let alertView = AlertView(frame: CGRect(x: 0, y: -80, width: window.width, height: height))
         alertView.setStyle(alertType)
         
         if let message = message {
@@ -42,7 +72,7 @@ class Notification : NSObject {
                            initialSpringVelocity: 1,
                            options: [],
                            animations: {
-                             alertView.frame = CGRect(x: 0, y: -20, width: windowWidth, height: 84)
+                             alertView.frame = CGRect(x: 0, y: -20, width: windowWidth, height: self.height)
                            }, completion: { _ in
                                 self.perform(#selector(self.dismiss(_:)), with: alertView, afterDelay: 1.25)
                            }
