@@ -8,23 +8,22 @@
 
 extension Analytics {
 
-    struct ConfigureGoogle {
-        init() {
-            if Analytics.shouldUse() {
-                configure()
-            }
-        }
-        
-        private func configure() {
-            let gai = GAI.sharedInstance()
-            
-            // Configure tracker from GoogleService-Info.plist.
-            var configureError: NSError?
-            GGLContext.sharedInstance().configureWithError(&configureError)
-            assert(configureError == nil, "Error configuring Google services: \(String(describing: configureError))")
-            
-            gai?.trackUncaughtExceptions = true  // report uncaught exceptions
-            gai?.logger.logLevel = .none
-        }
+    static func configureGoogle() {
+
+        guard Analytics.shouldUse() else { return }
+
+        configure()
+    }
+
+    private static func configure() {
+        let gai = GAI.sharedInstance()
+
+        // Configure tracker from GoogleService-Info.plist.
+        var configureError: NSError?
+        GGLContext.sharedInstance().configureWithError(&configureError)
+        assert(configureError == nil, "Error configuring Google services: \(String(describing: configureError))")
+
+        gai?.trackUncaughtExceptions = true  // report uncaught exceptions
+        gai?.logger.logLevel = .none
     }
 }

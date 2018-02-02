@@ -8,6 +8,36 @@
 
 import UIKit
 
+enum ScrollingZone {
+
+    case pullingDown
+    case movingUp
+    case shrunken
+
+    init?(yOffset y: CGFloat, maxHeaderHeight: CGFloat) {
+
+        if y < maxHeaderHeight && y >= 0 {
+
+            self = .movingUp
+
+        } else {
+
+            if y > maxHeaderHeight {
+
+                self = .shrunken
+
+            } else if y < 0 {
+
+                self = .pullingDown
+
+            } else {
+
+                return nil
+            }
+        }
+    }
+}
+
 class UserDetailsController: UIViewController {
 
     @IBOutlet weak var avatarBackground: UIView!
@@ -41,20 +71,21 @@ class UserDetailsController: UIViewController {
     
     @IBAction func tweetButtonTapped(_ sender: UIBarButtonItem) {
         guard let userPresenter = userPresenter else { return }
-        guard rankings.count > 0 else { return }
+        guard let firstRanking = rankings.first else { return }
         
-        let cityRanking = rankings[0].cityRanking ?? 0
-        let countryRanking = rankings[0].countryRanking ?? 0
+        let cityRanking = firstRanking.cityRanking ?? 0
+        let countryRanking = firstRanking.countryRanking ?? 0
         
         var ranking = cityRanking
         if countryRanking >= cityRanking {
             ranking = countryRanking
         }
         
-        _ = Twitter.Share(ranking: "\(ranking)",
+        Twitter.share(ranking: "\(ranking)",
                       language: rankings[0].language!,
                       location: userPresenter.cityOrCountryOrWorld.capitalized)
     }
+    
     @IBAction func viewGithubProfileClicked() {
         if let login = userPresenter?.login {
             Browser.openPage("http://github.com/\(login)")
@@ -270,15 +301,16 @@ extension UserDetailsController: UITableViewDelegate {
         }
         
         let y = scrollView.contentOffset.y
-        
-        if y < profileExtendedBGHeight && y >= 0 {
-            moveFor(y)
-        } else {
-            if y > profileExtendedBGHeight {
-                moveFor(CGFloat(profileExtendedBGHeight))
-            } else if y < 0 {
-                moveFor(CGFloat(0))
-            }
+
+        guard let scrollingZone = ScrollingZone(yOffset: y, maxHeaderHeight: profileExtendedBGHeight) else { return }
+
+        print(scrollingZone)
+
+        switch scrollingZone {
+
+        case .movingUp: moveFor(y)
+        case .pullingDown: moveFor(CGFloat(0))
+        case .shrunken: moveFor(CGFloat(profileExtendedBGHeight))
         }
     }
     

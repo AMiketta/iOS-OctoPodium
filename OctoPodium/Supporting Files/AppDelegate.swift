@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Style.Decorator().decorateApp()
         
-        _ = Cache.Configure()
-        _ = Analytics.ConfigureGoogle()
+        Cache.configure()
+        Analytics.configureGoogle()
         
         return true
     }

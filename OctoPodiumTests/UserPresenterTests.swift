@@ -45,7 +45,7 @@ class UserPresenterTests: QuickSpec {
                 }
                 
                 it("is in podium") {
-                    XCTAssertEqual(userPresenter.isPodiumRanking(), true)
+                    XCTAssertEqual(userPresenter.isPodiumRanking, true)
                 }
                 
                 it("has 1st place background color") {
@@ -65,7 +65,7 @@ class UserPresenterTests: QuickSpec {
                 }
 
                 it("returns gold trophy image name") {
-                    XCTAssertEqual(userPresenter.rankingImageName(), "GoldMedal", "Expected image name to be GoldMedal")
+                    XCTAssertEqual(userPresenter.rankingImage, #imageLiteral(resourceName: "GoldMedal"), "Expected image name to be GoldMedal")
                 }
                 
                 it("returns login") {
@@ -84,7 +84,7 @@ class UserPresenterTests: QuickSpec {
                 }
                 
                 it("is in podium") {
-                    XCTAssertEqual(userPresenter.isPodiumRanking(), true)
+                    XCTAssertEqual(userPresenter.isPodiumRanking, true)
                 }
                 
                 it("has 1st place background color") {
@@ -104,7 +104,7 @@ class UserPresenterTests: QuickSpec {
                 }
                 
                 it("returns silver trophy image name") {
-                    XCTAssertEqual(userPresenter.rankingImageName(), "SilverMedal", "Expected image name to be SilverMedal")
+                    XCTAssertEqual(userPresenter.rankingImage, #imageLiteral(resourceName: "SilverMedal"), "Expected image name to be SilverMedal")
                 }
                 
                 it("returns login") {
@@ -123,7 +123,7 @@ class UserPresenterTests: QuickSpec {
                 }
                 
                 it("is in podium") {
-                    XCTAssertEqual(userPresenter.isPodiumRanking(), true)
+                    XCTAssertEqual(userPresenter.isPodiumRanking, true)
                 }
                 
                 it("has 3rd place background color") {
@@ -143,11 +143,7 @@ class UserPresenterTests: QuickSpec {
                 }
                 
                 it("returns bronze trophy image name") {
-                    XCTAssertEqual(
-                        userPresenter.rankingImageName(),
-                        "BronzeMedal",
-                        "Expected image name to be BronzeMedal"
-                    )
+                    XCTAssertEqual(userPresenter.rankingImage,#imageLiteral(resourceName: "BronzeMedal"), "Expected image name to be BronzeMedal")
                 }
                 
                 it("returns login") {
@@ -174,7 +170,7 @@ class UserPresenterTests: QuickSpec {
                 }
                 
                 it("is not in podium") {
-                    XCTAssertEqual(userPresenter.isPodiumRanking(), false)
+                    XCTAssertEqual(userPresenter.isPodiumRanking, false)
                 }
                 
                 it("has 4th place background color") {
@@ -194,10 +190,7 @@ class UserPresenterTests: QuickSpec {
                 }
                 
                 it("returns regular trophy image name") {
-                    XCTAssertEqual(
-                        userPresenter.rankingImageName(),
-                        nil,
-                        "Expected image name to be nil")
+                    XCTAssertEqual(userPresenter.rankingImage, nil, "Expected image name to be nil")
                 }
                 
                 it("returns login") {
@@ -216,7 +209,7 @@ class UserPresenterTests: QuickSpec {
                 }
                 
                 it("is not in podium") {
-                    XCTAssertEqual(userPresenter.isPodiumRanking(), false)
+                    XCTAssertEqual(userPresenter.isPodiumRanking, false)
                 }
                 
                 it("has regular place background color") {
@@ -237,7 +230,7 @@ class UserPresenterTests: QuickSpec {
                 
                 it("returns regular trophy image name") {
                     XCTAssertEqual(
-                        userPresenter.rankingImageName(),
+                        userPresenter.rankingImage,
                         nil,
                         "Expected image name to be nil")
                 }

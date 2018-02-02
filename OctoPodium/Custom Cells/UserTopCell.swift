@@ -28,9 +28,8 @@ class UserTopCell : UITableViewCell, CellWithAvatar, NibReusable {
     }
     
     private func fillRankingInformation() {
-        if userPresenter!.isPodiumRanking() {
-            rankingImageView.image = UIImage(named: userPresenter!.rankingImageName()!)
-        }
+
+        rankingImageView.image = userPresenter!.rankingImage
     }
     
     private func fillAvatar() {

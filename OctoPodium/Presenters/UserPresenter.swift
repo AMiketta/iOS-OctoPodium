@@ -6,11 +6,13 @@
 //  Copyright © 2015 Nuno Gonçalves. All rights reserved.
 //
 
+import UIKit
+
 protocol TopUserView {
     
 }
 
-class UserPresenter {
+struct UserPresenter {
     
     let user: User
     let ranking: Int
@@ -19,7 +21,7 @@ class UserPresenter {
     let totalStars: Int
     let totalTrophies: Int
     
-    private let medalImages = ["GoldMedal", "SilverMedal", "BronzeMedal"]
+    private let medalImages = [#imageLiteral(resourceName: "GoldMedal"), #imageLiteral(resourceName: "SilverMedal"), #imageLiteral(resourceName: "BronzeMedal")]
     
     private let positionColors: [UInt] = [
         kColors.firstInRankingColor,
@@ -54,7 +56,7 @@ class UserPresenter {
         }
     }
     
-    convenience init(user: User) {
+    init(user: User) {
         var ranking = 0
         if user.rankings.count > 0 {
             let topRanking = user.rankings[0]
@@ -63,29 +65,29 @@ class UserPresenter {
         self.init(user: user, ranking: ranking)
     }
     
-    func isPodiumRanking() -> Bool {
-        return ranking < 4 && ranking > 0
+    var isPodiumRanking: Bool {
+        return (1..<4).contains(ranking)
     }
 
-    func rankingImageName() -> String? {
-        if isPodiumRanking() {
-            return medalImages[ranking - 1]
-        }
-        return nil
+    var rankingImage: UIImage? {
+
+        guard isPodiumRanking else { return nil }
+
+        return medalImages[ranking - 1]
     }
     
     func backgroundColor() -> UInt? {
-        if isPodiumRanking() {
-            return positionColors[ranking - 1]
-        }
-        return nil
+
+        guard isPodiumRanking else { return nil }
+
+        return positionColors[ranking - 1]
     }
-    
+
     func avatarBackgroundColor() -> UInt? {
-        if isPodiumRanking() {
-            return avatarBGColors[ranking - 1]
-        }
-        return nil
+
+        guard isPodiumRanking else { return nil }
+
+        return avatarBGColors[ranking - 1]
     }
     
     var login: String {
@@ -111,12 +113,15 @@ class UserPresenter {
     }
     
     var fullLocation: String {
+
         let city = user.city?.capitalized
         let country = user.country?.capitalized
+
         return String.join(", ", country, city)
     }
     
     var gitHubUrl: String {
+
         return "https://www.github.com/\(user.login)"
     }
     
