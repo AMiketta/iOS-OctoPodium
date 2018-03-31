@@ -11,3 +11,4 @@ OctoPodium/Supporting Files/GoogleService-Info.plist
 
 build/*
 *.xcbkptlist
+IDEWorkspaceChecks.plist

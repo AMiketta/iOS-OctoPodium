@@ -14,22 +14,25 @@ class LanguageImage : UIImage {
         if let image = UIImage(named: language.lowercased()) {
             return image
         } else {
-            return UIImage(named: "Language")!
+            return #imageLiteral(resourceName: "Language")
         }
     }
     
-    class func load(for language: String, orLanguageImageView languageImageView: LanguageImageView) -> UIImage {
-        if language == "" { return #imageLiteral(resourceName: "Language") }
+    class func load(for language: String, orLanguageImageView languageImageView: ImageOrLetterView) -> UIImage {
+        if language.isEmpty { return #imageLiteral(resourceName: "Language") }
         
         if let image = UIImage(named: language.lowercased()) {
+
             return image
-        } else {
-            UIGraphicsBeginImageContextWithOptions(languageImageView.bounds.size, false, 0.0)
-            languageImageView.layer.render(in: UIGraphicsGetCurrentContext()!)
-            let image = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-            return image!
+
         }
+
+        UIGraphicsBeginImageContextWithOptions(languageImageView.bounds.size, false, 0.0)
+        languageImageView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return image!
     }
     
 }

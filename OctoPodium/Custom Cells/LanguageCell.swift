@@ -11,13 +11,25 @@ import UIKit
 class LanguageCell: UITableViewCell, NibReusable {
 
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var languageImageView: LanguageImageView!
+    @IBOutlet weak var languageImageView: ImageOrLetterView!
     
     var language: String? {
         didSet {
             let lang = language ?? ""
             nameLabel.text = lang
-            languageImageView.language = lang
+
+            guard !lang.isEmpty else {
+                languageImageView.render(with: .image(#imageLiteral(resourceName: "Language")))
+                return
+            }
+
+            if let image = UIImage(named: lang.lowercased()) {
+
+                languageImageView.render(with: .image(image))
+
+            } else {
+                languageImageView.render(with: .letter(character: lang.first!))
+            }
         }
     }
 }

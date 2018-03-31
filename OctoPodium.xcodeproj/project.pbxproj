@@ -123,12 +123,12 @@
 		85A731821C95F900002C721B /* GithubButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85A731811C95F900002C721B /* GithubButton.xib */; };
 		85AD6582206E19DA00B6E8AF /* GithubButtonSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AD6581206E19DA00B6E8AF /* GithubButtonSnapshotTests.swift */; };
 		85AD6584206E1C8000B6E8AF /* Snapshots in Resources */ = {isa = PBXBuildFile; fileRef = 85AD6583206E1C7F00B6E8AF /* Snapshots */; };
-		85AF8AF91C445E5F0022D97F /* LanguageImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85AF8AF81C445E5F0022D97F /* LanguageImageView.xib */; };
-		85AF8AFB1C445EAD0022D97F /* LanguageImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF8AFA1C445EAD0022D97F /* LanguageImageView.swift */; };
+		85AF8AFB1C445EAD0022D97F /* ImageOrLetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF8AFA1C445EAD0022D97F /* ImageOrLetterView.swift */; };
 		85AFEC1F1C0468CB006FC129 /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFEC1E1C0468CB006FC129 /* Ranking.swift */; };
 		85B2C2D01C18D07800112D95 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B2C2CF1C18D07800112D95 /* UIView.swift */; };
 		85B501831C10FCC300BBFD56 /* LanguageTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85B501821C10FCC300BBFD56 /* LanguageTitleView.xib */; };
 		85B501851C10FD8400BBFD56 /* LanguageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B501841C10FD8400BBFD56 /* LanguageTitleView.swift */; };
+		85B6A4C820702C98000DDB24 /* ImageOrLetterViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B6A4C720702C98000DDB24 /* ImageOrLetterViewSnapshotTests.swift */; };
 		85BBD9F71C5C2DCD00229ED2 /* TrendingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BBD9F61C5C2DCD00229ED2 /* TrendingController.swift */; };
 		85BBD9F91C5CA61000229ED2 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BBD9F81C5CA61000229ED2 /* Repository.swift */; };
 		85BBD9FE1C5D1AA600229ED2 /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BBD9FD1C5D1AA600229ED2 /* Repositories.swift */; };
@@ -325,12 +325,12 @@
 		85A731811C95F900002C721B /* GithubButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GithubButton.xib; sourceTree = "<group>"; };
 		85AD6581206E19DA00B6E8AF /* GithubButtonSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubButtonSnapshotTests.swift; sourceTree = "<group>"; };
 		85AD6583206E1C7F00B6E8AF /* Snapshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Snapshots; sourceTree = "<group>"; };
-		85AF8AF81C445E5F0022D97F /* LanguageImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LanguageImageView.xib; sourceTree = "<group>"; };
-		85AF8AFA1C445EAD0022D97F /* LanguageImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageImageView.swift; sourceTree = "<group>"; };
+		85AF8AFA1C445EAD0022D97F /* ImageOrLetterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOrLetterView.swift; sourceTree = "<group>"; };
 		85AFEC1E1C0468CB006FC129 /* Ranking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
 		85B2C2CF1C18D07800112D95 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		85B501821C10FCC300BBFD56 /* LanguageTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LanguageTitleView.xib; sourceTree = "<group>"; };
 		85B501841C10FD8400BBFD56 /* LanguageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageTitleView.swift; sourceTree = "<group>"; };
+		85B6A4C720702C98000DDB24 /* ImageOrLetterViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOrLetterViewSnapshotTests.swift; sourceTree = "<group>"; };
 		85BBD9F61C5C2DCD00229ED2 /* TrendingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingController.swift; sourceTree = "<group>"; };
 		85BBD9F81C5CA61000229ED2 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		85BBD9FD1C5D1AA600229ED2 /* Repositories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
@@ -631,8 +631,7 @@
 				85482E631C96BF9A00E20FDB /* GithubForkButton.swift */,
 				85820F3A1C0E2BCE0069D085 /* GithubLoadingView.swift */,
 				85482E611C96BE0800E20FDB /* GithubStarButton.swift */,
-				85AF8AFA1C445EAD0022D97F /* LanguageImageView.swift */,
-				85AF8AF81C445E5F0022D97F /* LanguageImageView.xib */,
+				85AF8AFA1C445EAD0022D97F /* ImageOrLetterView.swift */,
 				85B501841C10FD8400BBFD56 /* LanguageTitleView.swift */,
 				85B501821C10FCC300BBFD56 /* LanguageTitleView.xib */,
 				85EF2E3D1CE71D7B00745A68 /* NibView.swift */,
@@ -841,6 +840,7 @@
 			children = (
 				85AD6581206E19DA00B6E8AF /* GithubButtonSnapshotTests.swift */,
 				859CF0302070217100910C90 /* GithubLoadingViewSnapshotTests.swift */,
+				85B6A4C720702C98000DDB24 /* ImageOrLetterViewSnapshotTests.swift */,
 				852ADE57206EDE5A00C5F56C /* UserStatsViewSnapshotTests.swift */,
 			);
 			path = Tests;
@@ -1186,7 +1186,6 @@
 				8549ACCB1C6C8B1F004D8149 /* TitilliumWeb-ExtraLightItalic.ttf in Resources */,
 				857943A41C3DCC8B00824577 /* UserCell.xib in Resources */,
 				850485331C0FB11A004D952A /* AlertView.xib in Resources */,
-				85AF8AF91C445E5F0022D97F /* LanguageImageView.xib in Resources */,
 				85820F4A1C0E2C1A0069D085 /* GithubLoading-3.gif in Resources */,
 				85BBDA061C5E0BB300229ED2 /* TrendingRepositoryCell.xib in Resources */,
 				85820F491C0E2C1A0069D085 /* GithubLoading-2.gif in Resources */,
@@ -1464,7 +1463,7 @@
 				85D321211C0219C7001B7C7A /* User.swift in Sources */,
 				85BBDA021C5D1BDE00229ED2 /* CreateListFromHTML.swift in Sources */,
 				854B5BA21CA718F30070A456 /* GithubToken.swift in Sources */,
-				85AF8AFB1C445EAD0022D97F /* LanguageImageView.swift in Sources */,
+				85AF8AFB1C445EAD0022D97F /* ImageOrLetterView.swift in Sources */,
 				85D321251C022480001B7C7A /* UserDetailsController.swift in Sources */,
 				855825491CAA75C900851967 /* StarChecker.swift in Sources */,
 				85E656741C139F5100BB4278 /* Page.swift in Sources */,
@@ -1573,6 +1572,7 @@
 				85AD6582206E19DA00B6E8AF /* GithubButtonSnapshotTests.swift in Sources */,
 				858B91151C085E6400B510B3 /* SearchOptionsTests.swift in Sources */,
 				8517ECBF1C2C1EDB00467985 /* RankingPresenterTests.swift in Sources */,
+				85B6A4C820702C98000DDB24 /* ImageOrLetterViewSnapshotTests.swift in Sources */,
 				859CF0312070217100910C90 /* GithubLoadingViewSnapshotTests.swift in Sources */,
 				85D321051C02062E001B7C7A /* OctoPodiumTests.swift in Sources */,
 				85A1D2D01C2EB3A800774F49 /* MockNSURLSession.swift in Sources */,

@@ -21,7 +21,7 @@ class TrendingController : UIViewController {
     fileprivate var popoverController: ARSPopover?
     
     private var languageButton: UIButton!
-    private let languageImageView = LanguageImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+    private let languageImageView = ImageOrLetterView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
     
     private var repositories: [Repository] = []
     private var selectedRepository: Repository?
@@ -92,7 +92,22 @@ class TrendingController : UIViewController {
     }
     
     fileprivate func updateLanguageIcon() {
-        languageImageView.language = language
+
+        if language.isEmpty {
+
+            languageImageView.render(with: .image(#imageLiteral(resourceName: "Language")))
+
+        } else {
+
+            if let image = UIImage(named: language.lowercased()) {
+
+                languageImageView.render(with: .image(image))
+
+            } else {
+                languageImageView.render(with: .letter(character: language.first!))
+            }
+        }
+
         let image = LanguageImage.load(for: language, orLanguageImageView: languageImageView)
         languageButton.setBackgroundImage(image, for: UIControlState())
     }

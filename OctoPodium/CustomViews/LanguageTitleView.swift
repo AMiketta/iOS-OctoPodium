@@ -11,14 +11,26 @@ import UIKit
 class LanguageTitleView: UIView {
 
     @IBOutlet weak var topLevelSubView: UIView!
-    @IBOutlet weak var languageImageView: LanguageImageView!
+    @IBOutlet weak var languageImageView: ImageOrLetterView!
     @IBOutlet weak var name: UILabel!
 
     var language: String? {
         didSet {
             let lang = language ?? ""
             name.text = lang
-            languageImageView.language = lang
+
+            guard !lang.isEmpty else {
+                languageImageView.render(with: .image(#imageLiteral(resourceName: "Language")))
+                return
+            }
+
+            if let image = UIImage(named: lang.lowercased()) {
+
+                languageImageView.render(with: .image(image))
+
+            } else {
+                languageImageView.render(with: .letter(character: lang.first!))
+            }
         }
     }
     
