@@ -62,13 +62,13 @@ class GithubButton : UIView, NibView {
 
     func startLoading() {
         loadingView.show()
-        loadingView.setLoading()
+        loadingView.render(with: .animate)
         valueLabel.hide()
     }
     
     func stopLoading() {
         loadingView.hide()
-        loadingView.stop()
+        loadingView.render(with: .stop)
         valueLabel.show()
     }
     

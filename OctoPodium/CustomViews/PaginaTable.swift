@@ -35,8 +35,8 @@ class PaginaTable: UITableView {
     
     func addRefreshController(_ refreshActionTarget: AnyObject, action: Selector) {
         refreshController = UIRefreshControl()
-        refreshController!.backgroundColor = UIColor.clear
-        refreshController!.tintColor = UIColor.clear
+        refreshController!.backgroundColor = .clear
+        refreshController!.tintColor = .clear
         
         refreshController!.addTarget(refreshActionTarget, action: action, for:.valueChanged)
         
@@ -46,7 +46,7 @@ class PaginaTable: UITableView {
     
     private func addLoadingViewToRefreshControl() {
         loadingView = GithubLoadingView(frame: refreshController.bounds)
-        refreshController.addSubview(loadingView.view)
+        refreshController.addSubview(loadingView)
     }
     
     private func addRefreshControl() {
@@ -56,11 +56,11 @@ class PaginaTable: UITableView {
     
     func updateRefreshControl() {
         if refreshController.isRefreshing {
-            loadingView.setLoading()
+            loadingView.render(with: .animate)
         } else {
             let y = contentOffset.y
             let perc = y * 100 / 220
-            loadingView.setStaticWith(Int(abs(perc)), offset: y)
+            loadingView.render(with: .forceStatic(at: Int(abs(perc)), offset: y)) 
         }
     }
     

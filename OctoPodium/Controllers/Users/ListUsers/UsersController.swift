@@ -193,21 +193,21 @@ extension UsersController {
     func setNewSearchingState() {
         loadingView.show()
         noResultsLabl.hide()
-        loadingView.setLoading()
+        loadingView.render(with: .animate)
         usersTable.hide()
         emptyMessageLabl?.hide()
     }
     
     func setHasDataState() {
         loadingView.show()
-        loadingView.setLoading()
+        loadingView.render(with: .animate)
         usersTable.hide()
         emptyMessageLabl?.hide()
     }
     
     func setEmptyState() {
         loadingView.show()
-        loadingView.setLoading()
+        loadingView.render(with: .animate)
         usersTable.hide()
         emptyMessageLabl?.hide()
     }

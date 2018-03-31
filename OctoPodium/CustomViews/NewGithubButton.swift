@@ -154,13 +154,13 @@ final class NewGithubButton: UIView {
         case .startLoading:
 
             loadingView.show()
-            loadingView.setLoading()
+            loadingView.render(with: .animate)
             valueLabel.hide()
 
         case .stopLoading:
 
             loadingView.hide()
-            loadingView.stop()
+            loadingView.render(with: .stop)
             valueLabel.show()
         }
 

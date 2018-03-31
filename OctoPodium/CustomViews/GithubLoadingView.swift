@@ -8,69 +8,104 @@
 
 import UIKit
 
-class GithubLoadingView: UIView, NibView {
+final class GithubLoadingView: UIView {
 
-    var type: String? = nil
-    @IBOutlet weak var view: UIView!
-    @IBOutlet weak var loadingIndicatorImageView: UIImageView!
-    @IBOutlet weak var staticImage: UIImageView!
+    private typealias SELF = GithubLoadingView
+
+    private let loadingIndicatorImageView = UIImageView.usingAutoLayout()
+    private let staticImage: UIImageView = {
+
+        let imageView = UIImageView.usingAutoLayout()
+        imageView.image = #imageLiteral(resourceName: "GithubLoading-0.gif")
+        return imageView
+    }()
     
-    private let images = [
-        UIImage(named: "GithubLoading-0.gif")!,
-        UIImage(named: "GithubLoading-1.gif")!,
-        UIImage(named: "GithubLoading-2.gif")!,
-        UIImage(named: "GithubLoading-3.gif")!,
-        UIImage(named: "GithubLoading-4.gif")!,
-        UIImage(named: "GithubLoading-5.gif")!,
-        UIImage(named: "GithubLoading-6.gif")!,
-        UIImage(named: "GithubLoading-7.gif")!,
-    ]
+    private static let images = [#imageLiteral(resourceName: "GithubLoading-0.gif"), #imageLiteral(resourceName: "GithubLoading-1.gif"), #imageLiteral(resourceName: "GithubLoading-2.gif"), #imageLiteral(resourceName: "GithubLoading-3.gif"), #imageLiteral(resourceName: "GithubLoading-4.gif"), #imageLiteral(resourceName: "GithubLoading-5.gif"), #imageLiteral(resourceName: "GithubLoading-6.gif"), #imageLiteral(resourceName: "GithubLoading-7.gif")]
     
     override init(frame: CGRect) {
+
         super.init(frame: frame)
         commonInit()
-        view.frame = frame
-    }
-    
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)!
-        commonInit()
-        view.frame = bounds
-    }
-    
-    func afterCommonInit() {
-        view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        
-        staticImage.isHidden = true
-        
-        setAnimation()
-    }
-    
-    private func setAnimation() {
-        loadingIndicatorImageView.image = images[0]
-        loadingIndicatorImageView.animationImages = images
-        loadingIndicatorImageView.animationDuration = 0.75
-        loadingIndicatorImageView.startAnimating()
     }
 
-    func setStaticWith(_ percentage: Int, offset: CGFloat) {
-        
-        staticImage.show()
-        
-        staticImage.isHidden = abs(offset) < 30
-        loadingIndicatorImageView.isHidden = abs(offset) < 30
-        
-        var x = (100 / images.count) * percentage / 100
-        if x > 7 { x = 7 }
-        staticImage.image = images[x]
+    required init(coder aDecoder: NSCoder) {
+
+        super.init(coder: aDecoder)!
+        commonInit()
     }
-    
-    func stop() {
-        staticImage.show()
+
+    private func commonInit() {
+        addSubviews()
+        addSubviewsConstraints()
     }
-    
-    func setLoading() {
+
+    private func addSubviews() {
+
+        staticImage.hide()
+        autoresizingMask = [.flexibleHeight, .flexibleWidth]
+
+        addSubview(loadingIndicatorImageView)
+        addSubview(staticImage)
+
+        setupAnimation()
+    }
+
+    private func addSubviewsConstraints() {
+
+        [loadingIndicatorImageView, staticImage].forEach {
+            $0.constrain(width: 30, height: 30)
+            $0.center(in: self)
+        }
+    }
+
+    private func setupAnimation() {
+        
+        loadingIndicatorImageView.image = SELF.images[0]
+        loadingIndicatorImageView.animationImages = SELF.images
+        loadingIndicatorImageView.animationDuration = 0.75
+    }
+
+    func render(with configuration: Configuration) {
+
+        switch configuration {
+        case .animate:
+
+            animate()
+        case .stop:
+
+            stop()
+        case let .forceStatic(percentage, offset):
+            self.forceStatic(at: percentage, offset: offset)
+        }
+    }
+
+    private func animate() {
+
+        loadingIndicatorImageView.startAnimating()
         staticImage.hide()
     }
-    
+
+    private func stop() {
+
+        staticImage.show()
+        loadingIndicatorImageView.stopAnimating()
+    }
+
+    private func forceStatic(at percentage: Int, offset: CGFloat) {
+
+        staticImage.show()
+
+        staticImage.isHidden = abs(offset) < 30
+        loadingIndicatorImageView.isHidden = abs(offset) < 30
+
+        let x = min((100 / SELF.images.count) * percentage / 100, 7)
+        staticImage.image = SELF.images[x]
+    }
+
+    enum Configuration {
+
+        case animate
+        case stop
+        case forceStatic(at: Int, offset: CGFloat)
+    }
 }

@@ -123,7 +123,7 @@ class TrendingController : UIViewController {
     fileprivate func searchTrendingRepos() {
         repositoriesTable.hide()
         loadingView.show()
-        loadingView.setLoading()
+        loadingView.render(with: .animate)
         
         trendingDataSource.language = language
         isSearching = true

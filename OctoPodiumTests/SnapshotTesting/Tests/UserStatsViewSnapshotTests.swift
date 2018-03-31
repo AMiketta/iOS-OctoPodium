@@ -6,8 +6,6 @@
 //  Copyright © 2018 Nuno Gonçalves. All rights reserved.
 //
 
-import Foundation
-
 @testable import OctoPodium
 import FBSnapshotTestCase
 

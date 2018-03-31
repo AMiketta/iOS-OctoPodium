@@ -92,3 +92,104 @@ extension UIView {
         return view
     }
 }
+
+extension UIView {
+
+    public func pinToBounds(of view: UIView,
+                            topConstant: CGFloat = 0,
+                            leadingConstant: CGFloat = 0,
+                            bottomConstant: CGFloat = 0,
+                            trailingConstant: CGFloat = 0) {
+
+        self |- view
+        view -| self
+        
+        NSLayoutConstraint.activate([
+            self.topAnchor.constraint(equalTo: view.topAnchor, constant: topConstant),
+            self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: bottomConstant),
+        ])
+    }
+
+    /// Creates and activates constraints based on the referring view. The default value for each constant is 0, but if you pass nil that constraint won't be added.
+    /// - Parameters:
+    ///   - view: the view to apply the constraints against
+    ///   - top: top anchor constraint value
+    ///   - leading: leading anchor constraint value
+    ///   - bottom: bottom anchor constraint value
+    ///   - trailing: trailing anchor constraint value
+    public func constrain(referringTo view: UIView,
+                          top: CGFloat? = 0,
+                          leading: CGFloat? = 0,
+                          bottom: CGFloat? = 0,
+                          trailing: CGFloat? = 0) {
+
+        var constraintsToActivate: [NSLayoutConstraint] = []
+
+        if let topConstant = top {
+            constraintsToActivate.append(self.topAnchor.constraint(equalTo: view.topAnchor, constant: topConstant))
+        }
+
+        if let leadingConstant = leading {
+            constraintsToActivate.append(self.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingConstant))
+        }
+
+        if let bottomConstant = bottom {
+            constraintsToActivate.append(self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: bottomConstant))
+        }
+
+        if let trailingConstant = trailing {
+            constraintsToActivate.append(self.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: trailingConstant))
+        }
+
+        NSLayoutConstraint.activate(constraintsToActivate)
+    }
+
+    func constrain(width: CGFloat, height: CGFloat) {
+
+        NSLayoutConstraint.activate([
+            widthAnchor.constraint(equalToConstant: width),
+            heightAnchor.constraint(equalToConstant: height)
+        ])
+    }
+
+    func constrain(height: CGFloat) {
+
+        heightAnchor.constraint(equalToConstant: height).isActive = true
+    }
+
+    func center(in view: UIView) {
+
+        NSLayoutConstraint.activate([
+
+            self.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            self.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+        ])
+    }
+
+}
+
+precedencegroup EffectfulComposition {
+    associativity: left
+}
+
+infix operator |-|: EffectfulComposition
+@discardableResult
+func |-|(left: UIView, right: UIView) -> UIView {
+    left.trailingAnchor.constraint(equalTo: right.leadingAnchor).isActive = true
+    return right
+}
+
+infix operator -|: EffectfulComposition
+@discardableResult
+func -|(left: UIView, right: UIView) -> UIView {
+    left.trailingAnchor.constraint(equalTo: right.trailingAnchor).isActive = true
+    return right
+}
+
+infix operator |-: EffectfulComposition
+@discardableResult
+func |-(left: UIView, right: UIView) -> UIView {
+    left.leadingAnchor.constraint(equalTo: right.leadingAnchor).isActive = true
+    return right
+}
+
