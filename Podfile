@@ -15,12 +15,16 @@ target 'OctoPodium' do
     pod 'SDWebImage', '~>4.2.2'
     pod 'ARSPopover', '~> 2.2.1'
 
-target 'OctoPodiumTests' do
-  testing_pods
-  pod 'iOSSnapshotTestCase', git: 'https://github.com/nunogoncalves/ios-snapshot-test-case.git', branch: 'flexible-names'
-end
+    pod 'RxSwift', '4.1.2'
+    pod 'RxCocoa', '4.1.2'
+    
+    target 'OctoPodiumTests' do
+      testing_pods
+      pod 'iOSSnapshotTestCase', git: 'https://github.com/nunogoncalves/ios-snapshot-test-case.git', branch: 'flexible-names'
+    end
+
+    target 'OctoPodiumUITests' do
+        testing_pods
+    end
 end
 
-target 'OctoPodiumUITests' do
-  testing_pods
-end

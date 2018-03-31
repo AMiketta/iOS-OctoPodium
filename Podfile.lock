@@ -25,6 +25,9 @@ PODS:
   - Locksmith (4.0.0)
   - Nimble (7.0.2)
   - Quick (1.2.0)
+  - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.2)
   - SDWebImage (4.2.2):
     - SDWebImage/Core (= 4.2.2)
   - SDWebImage/Core (4.2.2)
@@ -37,6 +40,8 @@ DEPENDENCIES:
   - Locksmith (= 4.0.0)
   - Nimble
   - Quick (= 1.2.0)
+  - RxCocoa (= 4.1.2)
+  - RxSwift (= 4.1.2)
   - SDWebImage (~> 4.2.2)
 
 EXTERNAL SOURCES:
@@ -68,8 +73,10 @@ SPEC CHECKSUMS:
   Locksmith: e9bebbaaa4cee3c511bc358a44f843c3fe00e21f
   Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
 
-PODFILE CHECKSUM: bb0d09b9e2f605052979b6f2785d88f604bf7e18
+PODFILE CHECKSUM: fca70bbcacb2a5e427af707d44733db411d1102d
 
 COCOAPODS: 1.4.0
