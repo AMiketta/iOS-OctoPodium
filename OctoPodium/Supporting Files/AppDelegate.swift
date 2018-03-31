@@ -15,11 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         
-        Style.Decorator().decorateApp()
+        Style.Decorator.decorateApp()
         
-        _ = Cache.Configure()
-        _ = Analytics.ConfigureGoogle()
-        
+        Cache.configure()
+        Analytics.configureGoogle()
+
         return true
     }
 }

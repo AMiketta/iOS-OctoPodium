@@ -9,18 +9,18 @@
 struct Style {
     struct Decorator {
         
-        func decorateApp() {
+        static func decorateApp() {
             setUpTabsAppearance()
             setUpNavigationAppearance()
         }
 
-        private func setUpTabsAppearance() {
+        private static func setUpTabsAppearance() {
             let tabBarAppearance = UITabBar.appearance()
             tabBarAppearance.tintColor = .white
             tabBarAppearance.barTintColor = UIColor(hex: kColors.tabBarColor)
         }
         
-        private func setUpNavigationAppearance() {
+        private static func setUpNavigationAppearance() {
             let appearance = UINavigationBar.appearance()
             appearance.barStyle = .black
             appearance.barTintColor = UIColor(hex: kColors.navigationBarColor)
