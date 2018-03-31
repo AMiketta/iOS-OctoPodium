@@ -40,19 +40,20 @@ class LanguagesPopoverController: UIViewController {
     }
     
     private func getLanguages() {
-        Languages.Get().getAll(
-            success: { [weak self] languages in
+        Languages.Get().all { [weak self] result in
+
+            switch result {
+            case let .success(languages):
+
                 self?.languages = languages
                 self?.languages.insert("All Languages", at: 0)
                 self?.languagesTable.reloadData()
-            },
-            failure: { [weak self] _ in
+
+            case .failure(_):
+
                 self?.languageSelectorDelegate?.noLanguagesAvailable()
             }
-        )
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        }
     }
 }
 

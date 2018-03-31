@@ -16,26 +16,33 @@ struct Languages {
         
         private var successLangs: (([Language]) -> ())?
         
-        func getAll(success: @escaping ([Language]) -> (), failure: @escaping (ApiResponse) -> ()) {
-            successLangs = success
-            if Languages.Get.languages.count == 0 {
-                call(success: gotLanguages, failure: failure)
-            } else {
-                success(Languages.Get.languages)
-            }
-        }
-        
-        private func gotLanguages(_ languages: [Language]) {
-            Languages.Get.languages = languages
-            successLangs?(languages)
-        }
-
         var url: String {
             return "\(kUrls.languagesBaseUrl)?sort=popularity"
         }
-        
+
         func parse(_ json: JSON) -> [Language] {
             return json["languages"] as! [Language]
         }
+
+        func all(callback: @escaping (NetworkResult<[Language]>) -> ()) {
+
+            if Languages.Get.languages.isEmpty {
+
+                call(
+                    success: { languages in
+                        Languages.Get.languages = languages
+                        callback(.success(Languages.Get.languages))
+                    },
+                    failure: { apiResponse in
+
+                        callback(.failure(apiResponse))
+                    }
+                )
+
+            } else {
+                callback(.success(Languages.Get.languages))
+            }
+        }
+
     }
 }
