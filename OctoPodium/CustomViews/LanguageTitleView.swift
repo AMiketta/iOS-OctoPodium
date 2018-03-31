@@ -10,34 +10,20 @@ import UIKit
 
 class LanguageTitleView: UIView {
 
-    @IBOutlet weak var topLevelSubView: UIView!
-    @IBOutlet weak var languageImageView: ImageOrLetterView!
-    @IBOutlet weak var name: UILabel!
+    private let languageImageView = ImageOrLetterView.usingAutoLayout()
+    private let label: UILabel = {
 
-    var language: String? {
-        didSet {
-            let lang = language ?? ""
-            name.text = lang
+        let label = UILabel.usingAutoLayout()
+        label.textColor = .white
+        label.minimumScaleFactor = 0.5
+        label.font = UIFont.TitilliumWeb.bold.ofSize(17)
 
-            guard !lang.isEmpty else {
-                languageImageView.render(with: .image(#imageLiteral(resourceName: "Language")))
-                return
-            }
-
-            if let image = UIImage(named: lang.lowercased()) {
-
-                languageImageView.render(with: .image(image))
-
-            } else {
-                languageImageView.render(with: .letter(character: lang.first!))
-            }
-        }
-    }
+        return label
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
-        topLevelSubView.frame = frame
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -46,8 +32,43 @@ class LanguageTitleView: UIView {
     }
     
     private func commonInit() {
-        Bundle.main.loadNibNamed("LanguageTitleView", owner: self, options: nil)
-        addSubview(topLevelSubView)
+
+        addSubviews()
+        addSubviewsConstraints()
     }
-    
+
+    private func addSubviews() {
+
+        addSubview(languageImageView)
+        addSubview(label)
+    }
+
+    private func addSubviewsConstraints() {
+
+        languageImageView.constrain(width: 30, height: 30)
+
+        [languageImageView, label].forEach { $0.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true }
+
+        self |- languageImageView
+        languageImageView.trailingAnchor.constraint(equalTo: label.leadingAnchor, constant: -5).isActive = true
+        label -| self
+    }
+
+    func render(with language: String) {
+
+        label.text = language
+
+        guard !language.isEmpty else {
+            languageImageView.render(with: .image(#imageLiteral(resourceName: "Language")))
+            return
+        }
+
+        if let image = UIImage(named: language.lowercased()) {
+
+            languageImageView.render(with: .image(image))
+
+        } else {
+            languageImageView.render(with: .letter(character: language.first!))
+        }
+    }
 }

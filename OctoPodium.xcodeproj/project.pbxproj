@@ -109,6 +109,7 @@
 		8599284E1C0D9579000ABE8C /* LocationTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8599284D1C0D9579000ABE8C /* LocationTypeTests.swift */; };
 		859928511C0DAB23000ABE8C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859928501C0DAB23000ABE8C /* String.swift */; };
 		859CE4BF1C2FDF3D008A7856 /* PageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859CE4BE1C2FDF3D008A7856 /* PageTests.swift */; };
+		859CEF61207045C1006253CB /* LanguageTitleViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859CEF60207045C1006253CB /* LanguageTitleViewSnapshotTests.swift */; };
 		859CF02A206FF16300910C90 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859CF029206FF16300910C90 /* NetworkResult.swift */; };
 		859CF02F206FFF5800910C90 /* LanguagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859CF02E206FFF5800910C90 /* LanguagesView.swift */; };
 		859CF0312070217100910C90 /* GithubLoadingViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859CF0302070217100910C90 /* GithubLoadingViewSnapshotTests.swift */; };
@@ -126,7 +127,6 @@
 		85AF8AFB1C445EAD0022D97F /* ImageOrLetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF8AFA1C445EAD0022D97F /* ImageOrLetterView.swift */; };
 		85AFEC1F1C0468CB006FC129 /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AFEC1E1C0468CB006FC129 /* Ranking.swift */; };
 		85B2C2D01C18D07800112D95 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B2C2CF1C18D07800112D95 /* UIView.swift */; };
-		85B501831C10FCC300BBFD56 /* LanguageTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85B501821C10FCC300BBFD56 /* LanguageTitleView.xib */; };
 		85B501851C10FD8400BBFD56 /* LanguageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B501841C10FD8400BBFD56 /* LanguageTitleView.swift */; };
 		85B6A4C820702C98000DDB24 /* ImageOrLetterViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B6A4C720702C98000DDB24 /* ImageOrLetterViewSnapshotTests.swift */; };
 		85BBD9F71C5C2DCD00229ED2 /* TrendingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BBD9F61C5C2DCD00229ED2 /* TrendingController.swift */; };
@@ -311,6 +311,7 @@
 		8599284D1C0D9579000ABE8C /* LocationTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTypeTests.swift; sourceTree = "<group>"; };
 		859928501C0DAB23000ABE8C /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		859CE4BE1C2FDF3D008A7856 /* PageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTests.swift; sourceTree = "<group>"; };
+		859CEF60207045C1006253CB /* LanguageTitleViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTitleViewSnapshotTests.swift; sourceTree = "<group>"; };
 		859CF029206FF16300910C90 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		859CF02E206FFF5800910C90 /* LanguagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesView.swift; sourceTree = "<group>"; };
 		859CF0302070217100910C90 /* GithubLoadingViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubLoadingViewSnapshotTests.swift; sourceTree = "<group>"; };
@@ -328,7 +329,6 @@
 		85AF8AFA1C445EAD0022D97F /* ImageOrLetterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOrLetterView.swift; sourceTree = "<group>"; };
 		85AFEC1E1C0468CB006FC129 /* Ranking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
 		85B2C2CF1C18D07800112D95 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		85B501821C10FCC300BBFD56 /* LanguageTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LanguageTitleView.xib; sourceTree = "<group>"; };
 		85B501841C10FD8400BBFD56 /* LanguageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageTitleView.swift; sourceTree = "<group>"; };
 		85B6A4C720702C98000DDB24 /* ImageOrLetterViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOrLetterViewSnapshotTests.swift; sourceTree = "<group>"; };
 		85BBD9F61C5C2DCD00229ED2 /* TrendingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingController.swift; sourceTree = "<group>"; };
@@ -633,7 +633,6 @@
 				85482E611C96BE0800E20FDB /* GithubStarButton.swift */,
 				85AF8AFA1C445EAD0022D97F /* ImageOrLetterView.swift */,
 				85B501841C10FD8400BBFD56 /* LanguageTitleView.swift */,
-				85B501821C10FCC300BBFD56 /* LanguageTitleView.xib */,
 				85EF2E3D1CE71D7B00745A68 /* NibView.swift */,
 				85E6566E1C1352C600BB4278 /* PaginaTable.swift */,
 				85BBDA091C5E85E500229ED2 /* Reusable.swift */,
@@ -841,6 +840,7 @@
 				85AD6581206E19DA00B6E8AF /* GithubButtonSnapshotTests.swift */,
 				859CF0302070217100910C90 /* GithubLoadingViewSnapshotTests.swift */,
 				85B6A4C720702C98000DDB24 /* ImageOrLetterViewSnapshotTests.swift */,
+				859CEF60207045C1006253CB /* LanguageTitleViewSnapshotTests.swift */,
 				852ADE57206EDE5A00C5F56C /* UserStatsViewSnapshotTests.swift */,
 			);
 			path = Tests;
@@ -1168,7 +1168,6 @@
 				85820F481C0E2C1A0069D085 /* GithubLoading-1.gif in Resources */,
 				8549ACC81C6C8B1F004D8149 /* TitilliumWeb-Bold.ttf in Resources */,
 				8549ACCD1C6C8B1F004D8149 /* TitilliumWeb-Light.ttf in Resources */,
-				85B501831C10FCC300BBFD56 /* LanguageTitleView.xib in Resources */,
 				8549ACCE1C6C8B1F004D8149 /* TitilliumWeb-LightItalic.ttf in Resources */,
 				85118F201C47A802002B452F /* RankingCell.xib in Resources */,
 				85820F4D1C0E2C1A0069D085 /* GithubLoading-6.gif in Resources */,
@@ -1574,6 +1573,7 @@
 				8517ECBF1C2C1EDB00467985 /* RankingPresenterTests.swift in Sources */,
 				85B6A4C820702C98000DDB24 /* ImageOrLetterViewSnapshotTests.swift in Sources */,
 				859CF0312070217100910C90 /* GithubLoadingViewSnapshotTests.swift in Sources */,
+				859CEF61207045C1006253CB /* LanguageTitleViewSnapshotTests.swift in Sources */,
 				85D321051C02062E001B7C7A /* OctoPodiumTests.swift in Sources */,
 				85A1D2D01C2EB3A800774F49 /* MockNSURLSession.swift in Sources */,
 				854A404B1C3ADCF7005E7FF1 /* NetworkStatusTests.swift in Sources */,
