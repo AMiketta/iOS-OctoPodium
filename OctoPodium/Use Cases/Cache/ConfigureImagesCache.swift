@@ -6,18 +6,18 @@
 //  Copyright © 2016 Nuno Gonçalves. All rights reserved.
 //
 
-import SDWebImage
+//import SDWebImage
 
 struct Cache {
     
     static func configure() {
 
-        SDWebImageManager.shared().imageCache?.config.maxCacheAge = 60 * 60 * 24 * 31
-        let urlCache = URLCache(
-            memoryCapacity: 4 * 1024 * 1024,
-            diskCapacity: 20 * 1024 * 1024,
-            diskPath: nil)
-
-        URLCache.shared = urlCache
+//        SDWebImageManager.shared().imageCache?.config.maxCacheAge = 60 * 60 * 24 * 31
+//        let urlCache = URLCache(
+//            memoryCapacity: 4 * 1024 * 1024,
+//            diskCapacity: 20 * 1024 * 1024,
+//            diskPath: nil)
+//
+//        URLCache.shared = urlCache
     }
 }

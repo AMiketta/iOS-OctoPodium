@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SDWebImage
+import Nuke
 
 extension UIImageView {
     
@@ -15,7 +15,13 @@ extension UIImageView {
 
         guard let url = URL(string: url) else { return onFinished() }
 
-        sd_setImage(with: url) { (_, _, _, _) in
+        Nuke.loadImage(with: url, into: self) { (result, success) in
+
+            if case let .success(image) = result {
+
+                self.image = image
+            }
+
             onFinished()
         }
     }

@@ -1381,18 +1381,18 @@
 				"${BUILT_PRODUCTS_DIR}/ARSPopover/ARSPopover.framework",
 				"${BUILT_PRODUCTS_DIR}/Kanna/Kanna.framework",
 				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
+				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARSPopover.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kanna.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1774,19 +1774,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
-				"HEADER_SEARCH_PATHS[arch=*]" = (
-					"$(inherited)",
-					"${PODS_ROOT}/Google/Headers",
-					"$(SDKROOT)/usr/include/libxml2",
-					"$(inherited)",
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Headers/Public/Google\"",
-					"\"${PODS_ROOT}/Headers/Public/GoogleAnalytics\"",
-					"\"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\"",
-					"\"${PODS_ROOT}/Headers/Public/GoogleNetworkingUtilities\"",
-					"\"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\"",
-					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"",
-				);
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(inherited) ${PODS_ROOT}/Google/Headers $(SDKROOT)/usr/include/libxml2 $(inherited) \"${PODS_ROOT}/Headers/Public\" \"${PODS_ROOT}/Headers/Public/Google\" \"${PODS_ROOT}/Headers/Public/GoogleAnalytics\" \"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\" \"${PODS_ROOT}/Headers/Public/GoogleNetworkingUtilities\" \"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\" \"${PODS_ROOT}/Headers/Public/GoogleUtilities\"";
 				INFOPLIST_FILE = "OctoPodium/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1850,7 +1838,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.numicago.ios.OctoPodiumTests;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = OctoPodiumTests;
-				SWIFT_OBJC_BRIDGING_HEADER = "OctoPodium/Supporting Files/OctoPodium-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OctoPodium.app/OctoPodium";
@@ -1868,7 +1856,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.numicago.ios.OctoPodiumTests;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = OctoPodiumTests;
-				SWIFT_OBJC_BRIDGING_HEADER = "OctoPodium/Supporting Files/OctoPodium-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OctoPodium.app/OctoPodium";
