@@ -23,43 +23,26 @@ class OctoPodiumUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testLanguagesScreen() {
+    func testBasicNavigationScreen() {
 
-        let app = XCUIApplication()
-        
-        let expectation0 = expectation(description: "High expectations")
-        expectation0.fulfill()
-        
-        waitForExpectations(timeout: 3, handler: nil)
-        
-        snapshot(name: "01LanguagesScreen")
-        
-        let tablesQuery = app.tables
-        tablesQuery.cells.staticTexts["JavaScript"].tap()
-        
-        snapshot(name: "02LanguageRankingScreen")
-        
-        tablesQuery.cells.staticTexts["facebook"].tap()
-        
-        snapshot(name: "03FacebookScreen")
+        let mainTabScreen = MainTabScreen(app: app, testCase: self)
 
-        let tabBarsQuery = app.tabBars
-        tabBarsQuery.buttons["Trending"].tap()
-        
-        let expectation1 = expectation(description: "High expectations")
-        expectation1.fulfill()
-    
-        waitForExpectations(timeout: 8, handler: { _ in
-            snapshot(name: "04TrendingScreen")
-        })
+        mainTabScreen
+            .goToLanguagesScreen()
+            .takeASnapshot(named: "01LanguagesScreen")
+            .goToJavascriptRanking()
+            .takeASnapshot(named: "02LanguageRankingScreen")
+            .goToFacebookProfile()
+            .takeASnapshot(named: "03FacebookScreen")
 
-        tabBarsQuery.buttons["More"].tap()
-        
-        let cells = app.tables.cells
-        cells.element(boundBy: 0).tap()
-        
-        app.navigationBars["Github Account"].buttons["Add"].tap()
-        snapshot(name: "05AddGitHubAccountScreen")
-        
+        mainTabScreen
+            .goToTrendingScreen()
+            .takeASnapshot(named: "04TrendingScreen")
+
+        mainTabScreen
+            .goToSettingsScreen()
+            .goToGithubAccountScreen()
+            .goToAddGithubAccountScreen()
+            .takeASnapshot(named: "05AddGitHubAccountScreen")
     }
 }
