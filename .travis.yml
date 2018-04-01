@@ -7,7 +7,7 @@ osx_image: xcode9.3beta
 # - pod repo update
 
 script:
-  - xcodebuild -scheme OctoPodium -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' build test
-#  - xcodebuild -workspace OctoPodium.xcworkspace -scheme OctoPodium -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
+  # - xcodebuild -scheme OctoPodium -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' build test
+  - xcodebuild -workspace OctoPodium.xcworkspace -scheme OctoPodium -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build test | xcpretty -c
 after_success:
   - bash <(curl -s https://codecov.io/bash)
