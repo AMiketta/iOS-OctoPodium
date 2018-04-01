@@ -14,62 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8EA78898A0EDE61257C0A11ED2BB0082"
-               BuildableName = "Pods_OctoPodium.framework"
-               BlueprintName = "Pods-OctoPodium"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A6A983FDBD57D9C2303073703534DEC3"
-               BuildableName = "Pods_OctoPodiumTests.framework"
-               BlueprintName = "Pods-OctoPodiumTests"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "866A4108FDD79711C7032F8E26414B1E"
-               BuildableName = "Pods_OctoPodiumUITests.framework"
-               BlueprintName = "Pods-OctoPodiumUITests"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "85D320EB1C02062E001B7C7A"
-               BuildableName = "OctoPodium.app"
-               BlueprintName = "OctoPodium"
-               ReferencedContainer = "container:OctoPodium.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "17052BA66F1555149D26CACD301A324E"
                BuildableName = "ARSPopover.framework"
                BlueprintName = "ARSPopover"
@@ -186,6 +130,62 @@
                BuildableName = "FBSnapshotTestCase.framework"
                BlueprintName = "iOSSnapshotTestCase"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8EA78898A0EDE61257C0A11ED2BB0082"
+               BuildableName = "Pods_OctoPodium.framework"
+               BlueprintName = "Pods-OctoPodium"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A6A983FDBD57D9C2303073703534DEC3"
+               BuildableName = "Pods_OctoPodiumTests.framework"
+               BlueprintName = "Pods-OctoPodiumTests"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "866A4108FDD79711C7032F8E26414B1E"
+               BuildableName = "Pods_OctoPodiumUITests.framework"
+               BlueprintName = "Pods-OctoPodiumUITests"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "85D320EB1C02062E001B7C7A"
+               BuildableName = "OctoPodium.app"
+               BlueprintName = "OctoPodium"
+               ReferencedContainer = "container:OctoPodium.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

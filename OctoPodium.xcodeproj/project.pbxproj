@@ -102,8 +102,6 @@
 		857E2C331C1C37970095DCC0 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857E2C321C1C37970095DCC0 /* SearchBar.swift */; };
 		857E2C371C1C87370095DCC0 /* ConvertUsersDictionaryToUsersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857E2C361C1C87370095DCC0 /* ConvertUsersDictionaryToUsersTests.swift */; };
 		857EB00C1C5951BB00C315DF /* SendToGoogle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857EB00B1C5951BB00C315DF /* SendToGoogle.swift */; };
-		857F76311CDD75B8002A75C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 857F76301CDD75B8002A75C4 /* GoogleService-Info.plist */; };
-		857F76351CDD75D1002A75C4 /* Github.plist in Resources */ = {isa = PBXBuildFile; fileRef = 857F76341CDD75D1002A75C4 /* Github.plist */; };
 		85820F3C1C0E2BCE0069D085 /* GithubLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85820F3A1C0E2BCE0069D085 /* GithubLoadingView.swift */; };
 		85820F471C0E2C1A0069D085 /* GithubLoading-0.gif in Resources */ = {isa = PBXBuildFile; fileRef = 85820F3F1C0E2C1A0069D085 /* GithubLoading-0.gif */; };
 		85820F481C0E2C1A0069D085 /* GithubLoading-1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 85820F401C0E2C1A0069D085 /* GithubLoading-1.gif */; };
@@ -173,6 +171,8 @@
 		85DB969520717324002AF672 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DB969420717324002AF672 /* Quick.framework */; };
 		85DB969720717324002AF672 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DB969620717324002AF672 /* RxCocoa.framework */; };
 		85DB969920717324002AF672 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DB969820717324002AF672 /* RxSwift.framework */; };
+		85DB969B20717E48002AF672 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85DB969A20717E48002AF672 /* GoogleService-Info.plist */; };
+		85DB969D20717E74002AF672 /* Github.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85DB969C20717E74002AF672 /* Github.plist */; };
 		85E09EC81D0A9B5200752BB0 /* HTTPGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E09EC71D0A9B5200752BB0 /* HTTPGetter.swift */; };
 		85E09ECA1D0A9BD200752BB0 /* HTTPPoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E09EC91D0A9BD200752BB0 /* HTTPPoster.swift */; };
 		85E09ECC1D0A9CA600752BB0 /* HTTPPutter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E09ECB1D0A9CA600752BB0 /* HTTPPutter.swift */; };
@@ -323,8 +323,6 @@
 		857E2C321C1C37970095DCC0 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		857E2C361C1C87370095DCC0 /* ConvertUsersDictionaryToUsersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertUsersDictionaryToUsersTests.swift; sourceTree = "<group>"; };
 		857EB00B1C5951BB00C315DF /* SendToGoogle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendToGoogle.swift; sourceTree = "<group>"; };
-		857F76301CDD75B8002A75C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Secrets/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		857F76341CDD75D1002A75C4 /* Github.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Github.plist; path = ../../../../Secrets/Github.plist; sourceTree = "<group>"; };
 		85820F3A1C0E2BCE0069D085 /* GithubLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubLoadingView.swift; sourceTree = "<group>"; };
 		85820F3F1C0E2C1A0069D085 /* GithubLoading-0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "GithubLoading-0.gif"; sourceTree = "<group>"; };
 		85820F401C0E2C1A0069D085 /* GithubLoading-1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "GithubLoading-1.gif"; sourceTree = "<group>"; };
@@ -402,6 +400,8 @@
 		85DB969420717324002AF672 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85DB969620717324002AF672 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85DB969820717324002AF672 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85DB969A20717E48002AF672 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		85DB969C20717E74002AF672 /* Github.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Github.plist; sourceTree = "<group>"; };
 		85E09EC71D0A9B5200752BB0 /* HTTPGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPGetter.swift; path = HTTPMethods/HTTPGetter.swift; sourceTree = "<group>"; };
 		85E09EC91D0A9BD200752BB0 /* HTTPPoster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPPoster.swift; path = HTTPMethods/HTTPPoster.swift; sourceTree = "<group>"; };
 		85E09ECB1D0A9CA600752BB0 /* HTTPPutter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPPutter.swift; path = HTTPMethods/HTTPPutter.swift; sourceTree = "<group>"; };
@@ -548,7 +548,7 @@
 		853E11511CA746C4002263BD /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
-				857F76341CDD75D1002A75C4 /* Github.plist */,
+				85DB969C20717E74002AF672 /* Github.plist */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -741,9 +741,9 @@
 			children = (
 				85EF2E421CE79B8000745A68 /* 1Password */,
 				85D320EF1C02062E001B7C7A /* AppDelegate.swift */,
-				857F76301CDD75B8002A75C4 /* GoogleService-Info.plist */,
 				85D320FB1C02062E001B7C7A /* Info.plist */,
 				858654F61C49BF3A0025B4F0 /* OctoPodium-Bridging-Header.h */,
+				85DB969A20717E48002AF672 /* GoogleService-Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -1243,9 +1243,9 @@
 				85D320FA1C02062E001B7C7A /* LaunchScreen.storyboard in Resources */,
 				85D320F71C02062E001B7C7A /* Assets.xcassets in Resources */,
 				8549ACC71C6C8B1F004D8149 /* TitilliumWeb-Black.ttf in Resources */,
-				857F76351CDD75D1002A75C4 /* Github.plist in Resources */,
 				85820F4E1C0E2C1A0069D085 /* GithubLoading-7.gif in Resources */,
 				85820F481C0E2C1A0069D085 /* GithubLoading-1.gif in Resources */,
+				85DB969B20717E48002AF672 /* GoogleService-Info.plist in Resources */,
 				8549ACC81C6C8B1F004D8149 /* TitilliumWeb-Bold.ttf in Resources */,
 				8549ACCD1C6C8B1F004D8149 /* TitilliumWeb-Light.ttf in Resources */,
 				8549ACCE1C6C8B1F004D8149 /* TitilliumWeb-LightItalic.ttf in Resources */,
@@ -1255,12 +1255,12 @@
 				85EF2E4A1CE79CBE00745A68 /* 1Password.xcassets in Resources */,
 				8549ACD01C6C8B1F004D8149 /* TitilliumWeb-SemiBold.ttf in Resources */,
 				85D320F51C02062E001B7C7A /* Main.storyboard in Resources */,
+				85DB969D20717E74002AF672 /* Github.plist in Resources */,
 				85A731821C95F900002C721B /* GithubButton.xib in Resources */,
 				85820F471C0E2C1A0069D085 /* GithubLoading-0.gif in Resources */,
 				8549ACC91C6C8B1F004D8149 /* TitilliumWeb-BoldItalic.ttf in Resources */,
 				8549ACD11C6C8B1F004D8149 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */,
 				853B31B21E27F4E90028345D /* UsersController.xib in Resources */,
-				857F76311CDD75B8002A75C4 /* GoogleService-Info.plist in Resources */,
 				852B43C51C6A3E4000A1B63A /* LanguageCell.xib in Resources */,
 				8549ACCB1C6C8B1F004D8149 /* TitilliumWeb-ExtraLightItalic.ttf in Resources */,
 				857943A41C3DCC8B00824577 /* UserCell.xib in Resources */,
