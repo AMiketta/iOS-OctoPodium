@@ -17,14 +17,16 @@ target 'OctoPodium' do
 
     pod 'RxSwift', '4.1.2'
     pod 'RxCocoa', '4.1.2'
-    
+
     target 'OctoPodiumTests' do
+      inherit! :search_paths
+
       testing_pods
       pod 'iOSSnapshotTestCase', git: 'https://github.com/nunogoncalves/ios-snapshot-test-case.git', branch: 'flexible-names'
     end
 
     target 'OctoPodiumUITests' do
-        testing_pods
+      inherit! :search_paths
     end
 end
 
