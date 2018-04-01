@@ -164,6 +164,15 @@
 		85D3B80A1CA7DF020004D276 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D3B8091CA7DF020004D276 /* HTTPMethod.swift */; };
 		85D3B80C1CA80A130004D276 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D3B80B1CA80A130004D276 /* SettingsController.swift */; };
 		85DB86361CE5C6FA00324A99 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DB86351CE5C6FA00324A99 /* UIImageView.swift */; };
+		85DB968920717324002AF672 /* ARSPopover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DB968820717324002AF672 /* ARSPopover.framework */; };
+		85DB968B20717324002AF672 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DB968A20717324002AF672 /* FBSnapshotTestCase.framework */; };
+		85DB968D20717324002AF672 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DB968C20717324002AF672 /* Kanna.framework */; };
+		85DB968F20717324002AF672 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DB968E20717324002AF672 /* Locksmith.framework */; };
+		85DB969120717324002AF672 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DB969020717324002AF672 /* Nimble.framework */; };
+		85DB969320717324002AF672 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DB969220717324002AF672 /* Nuke.framework */; };
+		85DB969520717324002AF672 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DB969420717324002AF672 /* Quick.framework */; };
+		85DB969720717324002AF672 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DB969620717324002AF672 /* RxCocoa.framework */; };
+		85DB969920717324002AF672 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85DB969820717324002AF672 /* RxSwift.framework */; };
 		85E09EC81D0A9B5200752BB0 /* HTTPGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E09EC71D0A9B5200752BB0 /* HTTPGetter.swift */; };
 		85E09ECA1D0A9BD200752BB0 /* HTTPPoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E09EC91D0A9BD200752BB0 /* HTTPPoster.swift */; };
 		85E09ECC1D0A9CA600752BB0 /* HTTPPutter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E09ECB1D0A9CA600752BB0 /* HTTPPutter.swift */; };
@@ -384,6 +393,15 @@
 		85D3B8091CA7DF020004D276 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		85D3B80B1CA80A130004D276 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		85DB86351CE5C6FA00324A99 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		85DB968820717324002AF672 /* ARSPopover.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ARSPopover.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85DB968A20717324002AF672 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85DB968C20717324002AF672 /* Kanna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kanna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85DB968E20717324002AF672 /* Locksmith.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Locksmith.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85DB969020717324002AF672 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85DB969220717324002AF672 /* Nuke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nuke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85DB969420717324002AF672 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85DB969620717324002AF672 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85DB969820717324002AF672 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E09EC71D0A9B5200752BB0 /* HTTPGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPGetter.swift; path = HTTPMethods/HTTPGetter.swift; sourceTree = "<group>"; };
 		85E09EC91D0A9BD200752BB0 /* HTTPPoster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPPoster.swift; path = HTTPMethods/HTTPPoster.swift; sourceTree = "<group>"; };
 		85E09ECB1D0A9CA600752BB0 /* HTTPPutter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPPutter.swift; path = HTTPMethods/HTTPPutter.swift; sourceTree = "<group>"; };
@@ -431,6 +449,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85DB968920717324002AF672 /* ARSPopover.framework in Frameworks */,
+				85DB968B20717324002AF672 /* FBSnapshotTestCase.framework in Frameworks */,
+				85DB968D20717324002AF672 /* Kanna.framework in Frameworks */,
+				85DB968F20717324002AF672 /* Locksmith.framework in Frameworks */,
+				85DB969120717324002AF672 /* Nimble.framework in Frameworks */,
+				85DB969320717324002AF672 /* Nuke.framework in Frameworks */,
+				85DB969520717324002AF672 /* Quick.framework in Frameworks */,
+				85DB969720717324002AF672 /* RxCocoa.framework in Frameworks */,
+				85DB969920717324002AF672 /* RxSwift.framework in Frameworks */,
 				57798DFC0F9EAE42E99051F3 /* Pods_OctoPodiumTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1071,6 +1098,15 @@
 		87B8F281E27B29535E0036B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				85DB968820717324002AF672 /* ARSPopover.framework */,
+				85DB968A20717324002AF672 /* FBSnapshotTestCase.framework */,
+				85DB968C20717324002AF672 /* Kanna.framework */,
+				85DB968E20717324002AF672 /* Locksmith.framework */,
+				85DB969020717324002AF672 /* Nimble.framework */,
+				85DB969220717324002AF672 /* Nuke.framework */,
+				85DB969420717324002AF672 /* Quick.framework */,
+				85DB969620717324002AF672 /* RxCocoa.framework */,
+				85DB969820717324002AF672 /* RxSwift.framework */,
 				B58F331328931330760F9F4B /* Pods_OctoPodium.framework */,
 				0298F6F88D8FC95CE8AEA0DA /* Pods_OctoPodiumTests.framework */,
 				5F0B0CF651E8BF61E9CA08B9 /* Pods_OctoPodiumUITests.framework */,
@@ -1774,7 +1810,19 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
-				"HEADER_SEARCH_PATHS[arch=*]" = "$(inherited) ${PODS_ROOT}/Google/Headers $(SDKROOT)/usr/include/libxml2 $(inherited) \"${PODS_ROOT}/Headers/Public\" \"${PODS_ROOT}/Headers/Public/Google\" \"${PODS_ROOT}/Headers/Public/GoogleAnalytics\" \"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\" \"${PODS_ROOT}/Headers/Public/GoogleNetworkingUtilities\" \"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\" \"${PODS_ROOT}/Headers/Public/GoogleUtilities\"";
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"${PODS_ROOT}/Google/Headers",
+					"$(SDKROOT)/usr/include/libxml2",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Google\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleNetworkingUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"",
+				);
 				INFOPLIST_FILE = "OctoPodium/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
