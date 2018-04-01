@@ -1850,6 +1850,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.numicago.ios.OctoPodiumTests;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = OctoPodiumTests;
+				SWIFT_OBJC_BRIDGING_HEADER = "OctoPodium/Supporting Files/OctoPodium-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OctoPodium.app/OctoPodium";
@@ -1867,6 +1868,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.numicago.ios.OctoPodiumTests;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = OctoPodiumTests;
+				SWIFT_OBJC_BRIDGING_HEADER = "OctoPodium/Supporting Files/OctoPodium-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OctoPodium.app/OctoPodium";
