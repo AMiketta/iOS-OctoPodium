@@ -26,8 +26,6 @@ class OctoPodiumUITests: FBSnapshotTestCase {
     
     func testBasicNavigationScreen() {
 
-        self.recordMode = true
-        
         let mainTabScreen = MainTabScreen(app: app, testCase: self)
 
         mainTabScreen
