@@ -3,9 +3,7 @@ xcode_workspace: OctoPodium.xcworkspace
 xcode_scheme: OctoPodium
 osx_image: xcode9.3beta
 before_install:
-  - true
   - pod repo update
-install: true
 script:
   # - cd Examples
   # - xcodebuild -version
