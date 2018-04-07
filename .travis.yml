@@ -12,6 +12,6 @@ script:
   # - xcodebuild -project DynamicColorExample.xcodeproj -scheme iOSTests -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6" -configuration Release ONLY_ACTIVE_ARCH=YES -enableCodeCoverage YES test
   # - bash <(curl -s https://codecov.io/bash) -cF ios
 
-  - xcodebuild -workspace OctoPodium.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' -scheme OctoPodium -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -enableCodeCoverage YES build test
+  - xcodebuild -workspace OctoPodium.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' -scheme OctoPodium -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -enableCodeCoverage YES GCC_GENERATE_TEST_COVERAGE_FILES=YES build test | xcpretty -c
 after_success:
   - bash <(curl -s https://codecov.io/bash) -X xcodeplist - -cF ios
