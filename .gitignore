@@ -13,3 +13,5 @@ OctoPodium/Resources/Configurations/Github.plist
 build/*
 *.xcbkptlist
 IDEWorkspaceChecks.plist
+env-vars.sh
+GithubCredentials.swift
