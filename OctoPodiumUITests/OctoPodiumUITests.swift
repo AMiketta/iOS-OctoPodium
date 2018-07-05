@@ -7,13 +7,18 @@
 //
 
 import XCTest
+//insert before class
+import AppCenterXCUITestExtensions
+
+
 
 class OctoPodiumUITests: XCTestCase {
     
-    let app = XCUIApplication()
+    let app = ACTLaunch.launch(XCUIApplication())
     
     override func setUp() {
         super.setUp()
+        guard let app = app else { return }
         setupSnapshot(app: app)
         continueAfterFailure = false
         app.launch()
