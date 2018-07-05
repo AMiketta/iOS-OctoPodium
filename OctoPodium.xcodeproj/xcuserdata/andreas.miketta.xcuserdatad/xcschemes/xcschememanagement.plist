@@ -3,11 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
+	<dict/>
+	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>OctoPodium.xcscheme</key>
+		<key>85D320EB1C02062E001B7C7A</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>9</integer>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>85D320FF1C02062E001B7C7A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>85D3210A1C02062E001B7C7A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
